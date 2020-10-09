@@ -1,0 +1,240 @@
+2020-10-10 00:02:14.195  INFO 13420 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 13420 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:02:14.199 DEBUG 13420 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:02:14.200  INFO 13420 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:02:14.989  INFO 13420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:02:14.994  INFO 13420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:02:14.995  INFO 13420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:02:15.052  INFO 13420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:02:15.052  INFO 13420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2020-10-10 00:02:15.083  WARN 13420 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [E:\blog\target\classes\com\zxt\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2020-10-10 00:02:15.085  INFO 13420 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-10 00:02:15.095  INFO 13420 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-10 00:02:15.128 ERROR 13420 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [E:\blog\target\classes\com\zxt\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.zxt.BlogApplication.main(BlogApplication.java:12) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 18 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.zxt.aspect.LogAspect.<init>(LogAspect.java:17) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_251]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_251]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_251]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_251]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 20 common frames omitted
+
+2020-10-10 00:03:58.759  INFO 1624 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 1624 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:03:58.761 DEBUG 1624 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:03:58.761  INFO 1624 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:03:59.510  INFO 1624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:03:59.516  INFO 1624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:03:59.516  INFO 1624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:03:59.570  INFO 1624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:03:59.571  INFO 1624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 781 ms
+2020-10-10 00:03:59.602  WARN 1624 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [E:\blog\target\classes\com\zxt\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+2020-10-10 00:03:59.604  INFO 1624 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-10 00:03:59.614  INFO 1624 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-10 00:03:59.621 ERROR 1624 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAspect' defined in file [E:\blog\target\classes\com\zxt\aspect\LogAspect.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.zxt.BlogApplication.main(BlogApplication.java:12) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zxt.aspect.LogAspect]: Constructor threw exception; nested exception is java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 18 common frames omitted
+Caused by: java.lang.ClassCastException: ch.qos.logback.classic.Logger cannot be cast to java.util.logging.Logger
+	at com.zxt.aspect.LogAspect.<init>(LogAspect.java:17) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_251]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_251]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_251]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_251]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 20 common frames omitted
+
+2020-10-10 00:08:00.699  INFO 4684 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 4684 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:08:00.700 DEBUG 4684 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:08:00.701  INFO 4684 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:08:01.543  INFO 4684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:08:01.550  INFO 4684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:08:01.550  INFO 4684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:08:01.605  INFO 4684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:08:01.605  INFO 4684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 863 ms
+2020-10-10 00:08:01.789  INFO 4684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:08:01.843  INFO 4684 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:08:01.960  INFO 4684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:08:01.967  INFO 4684 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.542 seconds (JVM running for 2.226)
+2020-10-10 00:08:15.881  INFO 4684 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:08:15.881  INFO 4684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:08:15.887  INFO 4684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-10-10 00:32:07.021  INFO 7140 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 7140 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:32:07.023 DEBUG 7140 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:32:07.023  INFO 7140 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:32:07.800  INFO 7140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:32:07.806  INFO 7140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:32:07.807  INFO 7140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:32:07.859  INFO 7140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:32:07.859  INFO 7140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 802 ms
+2020-10-10 00:32:08.031  INFO 7140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:32:08.097  INFO 7140 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:32:08.244  INFO 7140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:32:08.254  INFO 7140 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.497 seconds (JVM running for 2.244)
+2020-10-10 00:32:12.915  INFO 7140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:32:12.915  INFO 7140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:32:12.921  INFO 7140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-10-10 00:32:12.943  INFO 7140 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:32:12.950  INFO 7140 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:34:13.669  INFO 20972 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 20972 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:34:13.671 DEBUG 20972 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:34:13.671  INFO 20972 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:34:14.400  INFO 20972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:34:14.405  INFO 20972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:34:14.406  INFO 20972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:34:14.459  INFO 20972 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:34:14.460  INFO 20972 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2020-10-10 00:34:14.620  INFO 20972 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:34:14.675  INFO 20972 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:34:14.789  INFO 20972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:34:14.796  INFO 20972 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.376 seconds (JVM running for 2.065)
+2020-10-10 00:34:20.160  INFO 20972 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:34:20.160  INFO 20972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:34:20.167  INFO 20972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-10-10 00:34:20.182  INFO 20972 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:34:20.190  INFO 20972 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:41:22.099  INFO 20972 --- [http-nio-8080-exec-5] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:41:22.100  INFO 20972 --- [http-nio-8080-exec-5] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:41:28.203  INFO 20972 --- [http-nio-8080-exec-5] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:41:28.203  INFO 20972 --- [http-nio-8080-exec-5] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:41:42.725  INFO 12436 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 12436 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:41:42.727 DEBUG 12436 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:41:42.728  INFO 12436 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:41:43.545  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:41:43.551  INFO 12436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:41:43.552  INFO 12436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:41:43.608  INFO 12436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:41:43.608  INFO 12436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 847 ms
+2020-10-10 00:41:43.777  INFO 12436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:41:43.836  INFO 12436 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:41:43.956  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:41:43.963  INFO 12436 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.512 seconds (JVM running for 2.277)
+2020-10-10 00:41:49.173  INFO 12436 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:41:49.174  INFO 12436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:41:49.179  INFO 12436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-10-10 00:41:49.196  INFO 12436 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:41:49.204  INFO 12436 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:43:09.138  INFO 10232 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 10232 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:43:09.140 DEBUG 10232 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:43:09.140  INFO 10232 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:43:09.985  INFO 10232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:43:09.990  INFO 10232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:43:09.991  INFO 10232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:43:10.045  INFO 10232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:43:10.046  INFO 10232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2020-10-10 00:43:10.208  INFO 10232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:43:10.269  INFO 10232 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:43:10.385  INFO 10232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:43:10.392  INFO 10232 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.509 seconds (JVM running for 2.291)
+2020-10-10 00:43:16.436  INFO 10232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:43:16.437  INFO 10232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:43:16.442  INFO 10232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-10-10 00:43:16.457  INFO 10232 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:43:16.464  INFO 10232 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:45:04.348  INFO 18956 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 18956 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:45:04.350 DEBUG 18956 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:45:04.350  INFO 18956 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:45:05.130  INFO 18956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:45:05.135  INFO 18956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:45:05.136  INFO 18956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:45:05.193  INFO 18956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:45:05.193  INFO 18956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2020-10-10 00:45:05.383  INFO 18956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:45:05.438  INFO 18956 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:45:05.549  INFO 18956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:45:05.556  INFO 18956 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.499 seconds (JVM running for 2.174)
+2020-10-10 00:45:10.982  INFO 18956 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:45:10.982  INFO 18956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:45:10.990  INFO 18956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-10-10 00:45:11.007  INFO 18956 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:45:11.014  INFO 18956 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:45:38.154  INFO 9120 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 9120 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:45:38.155 DEBUG 9120 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:45:38.156  INFO 9120 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:45:38.859  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:45:38.865  INFO 9120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:45:38.865  INFO 9120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:45:38.920  INFO 9120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:45:38.920  INFO 9120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 738 ms
+2020-10-10 00:45:39.077  INFO 9120 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:45:39.130  INFO 9120 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:45:39.254  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:45:39.261  INFO 9120 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.348 seconds (JVM running for 2.055)
+2020-10-10 00:45:42.051  INFO 9120 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:45:42.051  INFO 9120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:45:42.057  INFO 9120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-10-10 00:45:42.071  INFO 9120 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:45:42.079  INFO 9120 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:46:04.265  INFO 9120 --- [http-nio-8080-exec-6] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:46:04.266  INFO 9120 --- [http-nio-8080-exec-6] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:48:20.439  INFO 9120 --- [http-nio-8080-exec-3] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:48:20.440  INFO 9120 --- [http-nio-8080-exec-3] com.zxt.aspect.LogAspect                 : ----------doAfter----------
+2020-10-10 00:48:32.765  INFO 14576 --- [main] com.zxt.BlogApplication                  : Starting BlogApplication on DESKTOP-90SO0J2 with PID 14576 (E:\blog\target\classes started by 16325 in E:\blog)
+2020-10-10 00:48:32.767 DEBUG 14576 --- [main] com.zxt.BlogApplication                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-10 00:48:32.767  INFO 14576 --- [main] com.zxt.BlogApplication                  : The following profiles are active: dev
+2020-10-10 00:48:33.492  INFO 14576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-10 00:48:33.498  INFO 14576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-10 00:48:33.498  INFO 14576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-10 00:48:33.551  INFO 14576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-10 00:48:33.551  INFO 14576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 754 ms
+2020-10-10 00:48:33.705  INFO 14576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 00:48:33.760  INFO 14576 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-10 00:48:33.883  INFO 14576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-10 00:48:33.889  INFO 14576 --- [main] com.zxt.BlogApplication                  : Started BlogApplication in 1.385 seconds (JVM running for 2.048)
+2020-10-10 00:48:38.004  INFO 14576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-10 00:48:38.004  INFO 14576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-10 00:48:38.009  INFO 14576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-10-10 00:48:38.024  INFO 14576 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : Request : {url='http://localhost:8080/abc', ip='0:0:0:0:0:0:0:1', classMethod='com.zxt.web.IndexController.abc', args=[]}
+2020-10-10 00:48:38.032  INFO 14576 --- [http-nio-8080-exec-1] com.zxt.aspect.LogAspect                 : ----------doAfter----------
