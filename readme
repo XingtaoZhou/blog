@@ -1,0 +1,77 @@
+数据库表设计
+1.blog类
+create table t_blog(
+    id varchar(32) primary key,//UUID
+    title varchar,              //标题
+    content varchar,            //内容
+    firstPicture varchar,       //首图
+    flag varchar,               //标记
+    views varchar，              //浏览次数
+    appreciation char(1),        //赞赏开启标志
+    shareStatement char(1),      //分享开启标志
+    commentabled char(1),        //评论开启标志
+    published char(1),          //发布标志
+    recommend char(1),          //推荐标志
+    createTime varchar(19),     //
+    updateTime varchar(19),
+    typeId varchar(32),         //外键
+    userId varchar(32)          //外键
+)
+
+2.type类
+create table t_type(
+    id varchar(32) primary key,
+    name varchar
+)
+
+3.tag类
+create table t_tag(
+    id varchar(32) primary key,
+    name varchar
+)
+
+4.comment类
+create table comment(
+    id varchar(32) primary key,
+    nickname varchar,
+    email varchar,
+    content varchar,
+    avatar varchar,         //头像
+    createTime varchar(19)，
+    blogId  varchar(32)      //外键
+)
+
+5.user类
+create table user(
+   id varchar(32) primary key,
+   nickname varchar,
+   username varchar,
+   password varchar,
+   email varchar,
+   content varchar,
+   avatar varchar,         //头像
+   type  varchar,
+   createTime varchar(19)
+   updateTime varchar(19)
+
+)
+
+6.blog与tag的关系表
+create table t_blog_tag(
+    id varchar(32),
+    blogId varchar(32),
+    tagId varchar(32)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
